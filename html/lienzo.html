@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lienzo</title>
+
+    <link rel="preload" href="../css/normalize.css" as="style">
+    <link rel="stylesheet" href="../css/normalize.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;500&display=swap" rel="stylesheet">
+
+    <link rel="preload" href="../css/style.css" as="style">
+    <link rel="stylesheet" href="../css/style.css">
+
+    <link rel="icon" href="../img/bola8.png">
+
+
+</head>
+
+<body>
+
+    <header class="menu">
+
+        <div class="menu__contenedor">
+
+            <!-- <a href="index.html"><img class="img__menu" src="../img/bola8.jpg" alt="Bola 8"></a> -->
+
+            <div class="menu__opciones">
+
+                <a class="menu__opcion" href="../index.html">Inicio</a>
+
+                <a class="menu__opcion" href="mesa.html">Mesas</a>
+
+                <a class="menu__opcion" href="bolas.html">Bolas De Billar</a>
+
+                <a class="menu__opcion" href="guantes.html">Guantes</a>
+
+                <a class="menu__opcion" href="taco.html">Taco de billar</a>
+
+                <a class="menu__opcion" href="mini.html">Mini mesas</a>
+
+                <a class="menu__opcion menu__opcion--activo" href="lienzo.html">Lienzo</a>
+
+            </div>
+
+            <div class="productos__random">
+
+                <a href="https://www.amazon.com.mx/FUTYE-impreso-moderno-modular-decoraci%C3%B3n/dp/B08ZJC7WMR/ref=pd_ybh_a_9?_encoding=UTF8&psc=1&refRID=ETMB7NJ31J9H7H3C0PQH">
+                    <div class="producto__random">
+
+                        <img class="img__producto" src="../img/lienzo1.png" alt="Lienzo billar">
+
+                        <div class="info__mesa">
+
+                            <p class="nombre__producto">FUTYE Lienzo impreso moderno de 5 piezas de arte</p>
+                            <p class="precio__producto">1,510.73</p>
+
+                        </div>
+
+                    </div>
+                </a>
+                <!--PRODUCTO-->
+
+            </div>
+            <!--PRODUCTOS-->
+
+        </div>
+
+    </header>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" crossorigin="anonymus"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-firestore.js"></script>
+    <script>
+    $(document).ready(function(){
+        var firebaseConfig = {
+            apiKey: "AIzaSyD5jBidN0aPyqD6NH6oT6kFDXJ0cRJ3PlY",
+            authDomain: "prueba-23672.firebaseapp.com",
+            projectId: "prueba-23672",
+            storageBucket: "prueba-23672.appspot.com",
+            messagingSenderId: "337671644062",
+            appId: "1:337671644062:web:e1ed448ecaf08fbb75ec8f",
+            measurementId: "G-XD1SNEP1E3"
+          };
+
+          firebase.initializeApp(firebaseConfig);
+          var db = firebase.firestore();
+
+          db.collection("Prueba").add({
+            nombre: "Luis",
+            edad: 23
+          });
+    })
+    </script>
+
+</body>
+
+</html>
